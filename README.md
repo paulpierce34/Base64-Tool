@@ -5,5 +5,5 @@ This tool can be used to simplify encoding/decoding base64 strings with powershe
 - Git clone script
 - Open powershell terminal
 - Import-Module ./Convert-Base64.ps1
-- Encode-String <string>
-- Decode-String <string>
+- Encode-String _string_
+- Decode-String _string_
