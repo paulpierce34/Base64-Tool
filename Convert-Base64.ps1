@@ -3,21 +3,29 @@
 function Invoke-Base64StringEncode {
     [CmdletBinding()]
     param(
-        [Parameter(Mandatory, ValueFromPipeline, Helpmessage = "Please specify a string to encode", Position = 1)]
+        [Parameter(Mandatory, ValueFromPipeline, Helpmessage = "Specify a string to encode", Position = 1)]
         [string[]]$EncodeText
     )
     process {
-        return @{[string]$EncodeText = [Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($EncodeText))}
+        $Response = @{}
+        Foreach($Text in $EncodeText) {
+            $Response += @{[string]$Text = [Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($Text))}
+        }
+        return $Response
     }
 }
 
 function Invoke-Base64StringDecode {
     [CmdletBinding()]
     param (
-        [Parameter(Mandatory, ValueFromPipeline, Helpmessage = "Please specify a string to decode", Position = 1)]
+        [Parameter(Mandatory, ValueFromPipeline, Helpmessage = "Specify a string to decode", Position = 1)]
         [string[]]$DecodeText
     )
     process {
-        Return @{[string]$DecodeText = [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($EncodedText))}
+        $Response = @{}
+        Foreach($Text in $DecodeText) {
+            $Response += @{[string]$DecodeText = [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($EncodedText))}
+        }
+        return $Response
     }
 }
