@@ -9,7 +9,6 @@ function Invoke-Base64StringEncode {
     process {
         return @{[string]$EncodeText = [Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($EncodeText))}
     }
-
 }
 
 function Invoke-Base64StringDecode {
