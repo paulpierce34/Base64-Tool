@@ -11,4 +11,4 @@ This tool can be used to simplify encoding/decoding base64 strings with powershe
 Also accepts pipeline input, and arrays of strings
 
 
-* Thanks to thejooosh  for their contributions :) *
+    * Thanks to thejooosh  for their contributions :) *
