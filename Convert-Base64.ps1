@@ -24,7 +24,7 @@ function Invoke-Base64StringDecode {
     process {
         $Response = @{}
         Foreach($Text in $DecodeText) {
-            $Response += @{[string]$DecodeText = [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($EncodedText))}
+            $Response += @{[string]$Text = [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($Text))}
         }
         return $Response
     }
