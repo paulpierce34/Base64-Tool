@@ -12,3 +12,6 @@ Also accepts pipeline input, and arrays of strings
 
 
     * Thanks to thejooosh  for their contributions :) *
+
+
+![image](https://github.com/paulpierce34/Base64-Tool/assets/33561650/3761cb5a-17b4-4a6f-9176-261770126fce)
