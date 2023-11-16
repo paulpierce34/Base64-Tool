@@ -9,3 +9,6 @@ This tool can be used to simplify encoding/decoding base64 strings with powershe
 - Invoke-Base64StringDecode _string_
 
 Also accepts pipeline input, and arrays of strings
+
+
+* Thanks to thejooosh  for their contributions :) *
